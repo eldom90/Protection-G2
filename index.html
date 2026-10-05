@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Zaštita poruka</title>
+</head>
+<body>
+  <main class="app">
+    <section class="phone" aria-label="Ekran telefona">
+      <div class="bar">
+        <div class="who"><span id="contact">Kontakt A</span><small id="status">Šifrovani razgovor</small></div>
+        <button class="toggle" id="toggle" type="button" aria-pressed="true"><span class="pip"></span><span id="toggleTxt">Zaštita uključena</span></button>
+      </div>
+      <div class="msgs" id="msgs" aria-live="polite"></div>
+      <div class="draft" id="draft"></div>
+      <div class="kbwrap" id="kbwrap">
+        <div class="pop" id="pop" hidden></div>
+        <div class="kb" id="kb"></div>
+      </div>
+    </section>
+
+    <section class="preview" id="glassesPreview" hidden aria-label="Simulacija ekrana naočala">
+      <p class="preview-cap">Simulacija ekrana naočala (vidi se samo u pregledniku, ne u Even aplikaciji)</p>
+      <div class="screen">
+        <div class="slot header" data-slot="header"></div>
+        <div class="slot log" data-slot="log"></div>
+        <div class="slot draftline" data-slot="draft"></div>
+        <div class="slot keymap" data-slot="keymap"></div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
